@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import splitties.toast.longToast
+import splitties.toast.toast
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,21 +15,26 @@ class MainActivity : AppCompatActivity() {
     private val ausgabe : TextView by lazy { findViewById(R.id.textViewOutput) }
     private val btnSimple : Button by lazy { findViewById(R.id.simpleButton) }
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         btnSimple.setOnClickListener {
+
             val message = eingabe1.text.toString()
             val message2 = eingabe2.text.toString()
 
-            val zahl1 = message.toInt()
-            val zahl2 = message2.toInt()
+
+                val zahl1 = message.toInt()
+                val zahl2 = message2.toInt()
 
 
-            val ergebnis = zahl1 + zahl2
+                val ergebnis = zahl1 + zahl2
 
-            ausgabe.text = ergebnis.toString()
+                ausgabe.text = ergebnis.toString()
+
         }
 
     }
