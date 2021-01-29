@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SimpleCalc</string>
     <string name="Number">Number</string>
+    <string name="noInput">Geben Sie erst eine Zahl ein</string>
 </resources>

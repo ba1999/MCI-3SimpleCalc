@@ -26,7 +26,9 @@ class MainActivity : AppCompatActivity() {
             val message = eingabe1.text.toString()
             val message2 = eingabe2.text.toString()
 
-
+            if(message.isEmpty() || message2.isEmpty()){
+                longToast(getString(R.string.noInput))
+            } else {
                 val zahl1 = message.toInt()
                 val zahl2 = message2.toInt()
 
@@ -34,7 +36,7 @@ class MainActivity : AppCompatActivity() {
                 val ergebnis = zahl1 + zahl2
 
                 ausgabe.text = ergebnis.toString()
-
+            }
         }
 
     }
